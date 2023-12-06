@@ -1,0 +1,50 @@
+.root {
+    -fx-background-image: url("BackgroundImage.jpg");
+    -fx-background-size: 1400 1200;
+}
+
+#question {
+    -fx-font-family: 'Open Sans Semibold';
+    -fx-font-size: 19.0;
+    -fx-text-fill: white;
+}
+.question-label {
+    -fx-background-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1);
+    -fx-border-width: 2;
+    -fx-border-color: linear-gradient(teal, navy);
+}
+
+.button {
+    -fx-font-family: 'Times New Roman Bold';
+    -fx-font-size: 17.0;
+    -fx-text-fill: white;
+}
+
+.hex-button {
+    -fx-shape: "M 0 50 L 15 0 L 85 0 L 100 50 L 85 100 L 15 100 Z";
+    -fx-background-color: #000000;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 1);
+    -fx-border-width: 2;
+    -fx-border-color: linear-gradient(teal, navy);
+}
+.root-home {
+    -fx-background-color: linear-gradient(to bottom right, #220033, #330066, #5500cc);
+    -fx-background-radius: 32px;
+    -fx-border-radius: 32px;
+}
+
+.label-title {
+    -fx-text-fill: white;
+}
+
+#playquizbtn {
+    -fx-background-color: linear-gradient(to bottom right, #220033, #330066, #5500cc);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-text-fill: white;
+}

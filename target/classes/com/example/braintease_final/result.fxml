@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" styleClass="home" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.braintease_final.Results">
+    <VBox alignment="CENTER" spacing="20">
+        <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" text="Quiz Results" />
+        <Label fx:id="remark" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" />
+        <HBox alignment="CENTER" spacing="20">
+            <VBox>
+                <Label fx:id="correcttext" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" />
+                <ProgressIndicator fx:id="correct_progress" prefHeight="100" prefWidth="100" progress="0" />
+            </VBox>
+            <VBox>
+                <Label fx:id="wrongtext" style="-fx-font-size: 18px; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" />
+                <ProgressIndicator fx:id="wrong_progress" prefHeight="100" prefWidth="100" progress="0" />
+            </VBox>
+        </HBox>
+        <Label fx:id="markstext" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" />
+        <Label fx:id="marks" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: teal; -fx-effect: dropshadow(gaussian, black, 2, 2, 0, 0);" />
+    </VBox>
+    <Button fx:id="restartbtn" layoutX="930.0" layoutY="773.0" mnemonicParsing="false" onAction="#restart" prefHeight="114.0" prefWidth="359.0" style="-fx-background-color: tan; -fx-background-radius: 20; -fx-border-radius: 20;" text="Play again">
+        <font>
+            <Font size="52.0" />
+        </font>
+    </Button>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000" prefWidth="1400" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.braintease_final.Controller">
+   <children>
+      <Label fx:id="scoreLabel" layoutX="551.0" layoutY="87.0" prefHeight="100.0" prefWidth="299.0" style="-fx-background-color: black; -fx-border-width: 2; -fx-border-color: linear-gradient(teal, navy);" styleClass="score-label" text="      Score:" textAlignment="CENTER" textFill="#f5f5f5">
+         <font>
+            <Font name="Bell MT Bold" size="49.0" />
+         </font></Label>
+      <Label fx:id="question" layoutX="300.0" layoutY="231.0" prefHeight="200.0" prefWidth="800.0" styleClass="question-label" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="opt1" layoutX="191.0" layoutY="558.0" mnemonicParsing="false" onAction="#opt1clicked" prefHeight="100.0" prefWidth="366.0" styleClass="hex-button" text="Option 1" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <Button id="opt3" fx:id="opt3" layoutX="191.0" layoutY="722.0" mnemonicParsing="false" onAction="#opt3clicked" prefHeight="100.0" prefWidth="366.0" styleClass="hex-button" text="Option 3" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <Button id="opt4" fx:id="opt4" layoutX="794.0" layoutY="558.0" mnemonicParsing="false" onAction="#opt4clicked" prefHeight="100.0" prefWidth="366.0" styleClass="hex-button" text="Option 4" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+      <Button id="opt2" fx:id="opt2" layoutX="794.0" layoutY="722.0" mnemonicParsing="false" onAction="#opt2clicked" prefHeight="100.0" prefWidth="366.0" styleClass="hex-button" text="Option 2" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

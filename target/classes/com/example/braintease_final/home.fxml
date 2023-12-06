@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" styleClass="home" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.braintease_final.Quiz">
+   <children>
+      <Label alignment="CENTER" layoutX="304.0" layoutY="97.0" prefHeight="305.0" prefWidth="792.0" style="-fx-background-color: clear;" styleClass="label-title" text="Brain Tease: Triva Challenge" textAlignment="CENTER">
+         <font>
+            <Font name="Bauhaus 93" size="54.0" />
+         </font>
+      </Label>
+      <Button fx:id="playquizbtn" layoutX="548.0" layoutY="629.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="304.0" text="PLAY">
+         <font>
+            <Font name="Open Sans Semibold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="1005.0" layoutY="978.0" prefHeight="15.0" prefWidth="333.0" text="brought to you by: Damien, Justin, Jiahong, Sowmiya" textFill="#ffed00">
+         <font>
+            <Font name="Serif Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="249.0" prefHeight="121.0" prefWidth="378.0" text="Answer questions correctly to rack up points!" textFill="#eeeeee" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="highscore" layoutX="608.0" layoutY="717.0" prefHeight="91.0" prefWidth="184.0" style="-fx-background-color: linear-gradient(to bottom right, #220033, #330066, #5500cc); -fx-background-radius: 20;" text="     High Score: &#10;no attempts go start one!" textAlignment="CENTER" textFill="#e4e4e4" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
