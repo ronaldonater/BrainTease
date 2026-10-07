@@ -1,78 +1,95 @@
 # BrainTease Trivia Challenge
 
-**Introduction**:
-For our group project, we will develop a trivia game inspired by elements from both "Jeopardy!" and "Who Wants to Be a Millionaire?". This game will feature multiple rounds with escalating difficulty levels.
+BrainTease is a JavaFX desktop trivia game inspired by *Jeopardy!* and *Who Wants to Be a Millionaire?*. Players progress through five rounds, earn points for correct answers, use lifelines, and finish with a timed Lightning Round.
 
-## Game Structure
+## Features
 
-### Introduction:
-- Welcome message and rules explanation.
-- Overview of game mechanics including scoring and lifelines.
+- Five-round single-player game with a persistent high score
+- Randomized question selection for every playthrough
+- No repeated displayed question within a game
+- Categories covering music, movies and television, video games, world history, U.S. history, science, sports, anime, professional wrestling, geography, food, books, and general knowledge
+- Music subcategories including K-Pop, Hip-Hop, R&B, Pop, Rock, and Nu-Metal
+- Sports subcategories including soccer, football, baseball, hockey, tennis, golf, and Formula 1
+- JavaFX interface with a fixed-size game window and adjustable audio control
+- Background music, answer feedback sounds, and a crowd-cheer result effect
+- Local best-score storage through Java Preferences
 
-### Round 1 - Multiple Choice:
-- Questions presented with four multiple-choice options.
-- Players select an option using corresponding letters (e.g., A, B, C, D).
-- Correct answers earn points; incorrect answers do not deduct points.
+## Rounds
 
-### Round 2 - True or False:
-- Players face true or false questions.
-- Correct answers earn points without deductions.
-- Questions progressively increase in difficulty.
+### 1. Multiple Choice
 
-### Round 3 - Jeopardy! Style:
-- Categorized questions; players select a category and point value.
-- Correct answers earn selected points; incorrect answers do not deduct points.
-- Varying difficulty levels for categories and point values.
+Answer five mixed-category questions. Each correct answer is worth 100 points.
 
-### Round 4 - Who Wants to Be a Millionaire? Style:
-- Players confront increasingly difficult questions with higher point values.
-- Lifelines available: "Ask the Audience," "Phone a Friend," "50:50."
-- Option to "Walk Away" with current earnings.
+### 2. True or False
 
-### Final Round - Lightning Round:
-- Time-limited rapid-fire questions.
-- Correct answers add points; incorrect answers don't deduct points.
-- Players aim to maximize their score before time expires.
+Answer five true-or-false questions. Each correct answer is worth 150 points.
 
-### Final Results and Winnings:
-- Display total points and potential earnings.
-- Declare the winner based on points or earnings.
+### 3. Jeopardy Board
 
-### Play Again Option:
-- Allow players to replay or return to the main menu.
+Choose from three randomly selected categories. Each category has $100, $200, and $300 questions. Answered tiles become unavailable and show a check mark.
 
-## Must-Have (M):
-- Basic game structure with all rounds.
-- Question display and user input for answers.
-- Scoring mechanism for correct answers.
-- Random question generation or predefined question bank.
-- Progression through rounds based on user input.
-- Basic lifelines (e.g., "Ask the Audience," "Phone a Friend," "50:50").
-- Final results and winnings display.
-- Play again option.
+### 4. Millionaire
 
-## Should-Have (S):
-- Visual enhancements (graphics, animations, UI design).
-- Round-specific timers (e.g., for Final Round).
-- Enhanced lifeline functionality with animations or graphics.
-- Category-based questions for Round 3 (Jeopardy! style).
-- Expanded question bank with varied difficulty levels.
-- Leaderboard functionality to track top scores.
+Answer five questions with increasing values: $500, $1,000, $2,000, $4,000, and $7,500.
 
-## Could-Have (C):
-- Sound effects and background music.
-- Player profiles with custom avatars.
-- Multiplayer mode for competition.
-- Difficulty settings.
-- In-depth statistics and player performance tracking.
-- Interactive host or AI-driven commentary.
+Available lifelines:
 
-## Won’t-Have (W):
-- Complex multiplayer networking.
-- Extensive social media integration.
-- In-app purchases or microtransactions.
-- Advanced AI for question generation.
+- **50:50** removes two incorrect answers.
+- **Ask the Audience** shows a percentage breakdown for every option.
+- **Phone a Friend** displays spoken advice through a randomly selected installed Windows text-to-speech voice.
+- **Walk Away** skips to the Lightning Round with the current score.
 
-## Minimum Viable Product (MVP):
-- Essential features (Must-Have) constitute the MVP.
-- The MVP ensures the basic game structure, question display, scoring, progression, lifelines, final results, and play again functionality.
+### 5. Lightning Round
+
+Answer as many unique questions as possible in 45 seconds. Each correct answer is worth 200 points.
+
+## Requirements
+
+- Windows
+- JDK 20
+- JavaFX 20.0.1
+- PowerShell
+
+The supplied launcher expects JDK 20 at `C:\Program Files\Java\jdk-20` when `JAVA_HOME` is not set. Set `JAVA_HOME` to another JDK 20 installation if needed.
+
+## Running the Game
+
+Open PowerShell in the project folder and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run-game.ps1
+```
+
+The launcher compiles the project, copies its resources, and starts the game. It expects JavaFX libraries in the local Maven cache under `%USERPROFILE%\.m2\repository\org\openjfx`.
+
+## Controls
+
+- Select an answer by clicking it.
+- Hover over the speaker icon in the top-right corner to reveal the music-volume slider.
+- Use the Millionaire lifeline buttons before selecting an answer.
+
+## Project Structure
+
+```text
+src/main/java/com/example/braintease_final/
+├── BrainTeaseTriviaGame.java  # JavaFX application and round flow
+├── QuestionBank.java          # Categories, question pools, and randomization
+├── SoundManager.java          # Music, crowd cheer, and Phone a Friend speech
+└── styles.css                 # Application styling
+
+src/main/resources/com/example/braintease_final/
+└── crowd-cheer.mp3            # Results-screen cheer effect
+
+run-game.ps1                   # Windows build-and-run launcher
+```
+
+## Development Notes
+
+The project uses JavaFX Controls, FXML, and Media. The current UI is built programmatically in `BrainTeaseTriviaGame.java`; legacy FXML files are not required by the current game flow.
+
+## Team
+
+- Damian Metovic — Project Manager, Primary Developer, and Lead Designer of the current BrainTease revamp
+- Jiahong Li — Original Technical Lead
+- Sowmiya Saveriyan — Original Developer
+- Justin Ramirez — Original Quality Assurance
